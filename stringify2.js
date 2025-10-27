@@ -18,3 +18,6 @@ const finalOutput = `"${escapedKey}"`;
 
 // Print the result
 console.log(finalOutput);
+
+
+aws secretsmanager put-secret-value --secret-id client-key-secret --secret-string "{\"client_key\":$(cat escaped-key.txt)}"
